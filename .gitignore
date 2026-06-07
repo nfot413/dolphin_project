@@ -4,6 +4,14 @@
 # Python
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+*.egg-info/
+*.log
 
 # data
 data/raw/*
@@ -16,6 +24,16 @@ data/spectrograms/*
 !data/labels/.gitkeep
 !data/segments/.gitkeep
 !data/spectrograms/.gitkeep
+
+exports/*
+!exports/.gitkeep
+
+outputs/*
+!outputs/.gitkeep
+
+# Generated intermediate click segment audio can be recreated from scripts.
+official_click_features/segments/*.wav
+!official_click_features/segments/click_segments_index.csv
 
 # PAMGuard / temp / db
 *.sqlite3
